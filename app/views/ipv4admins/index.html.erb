@@ -1,0 +1,31 @@
+<h1>Listing ipv4admins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip statu</th>
+      <th>Ip address</th>
+      <th>Host</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipv4admins.each do |ipv4admin| %>
+      <tr>
+        <td><%= ipv4admin.ip_statu %></td>
+        <td><%= ipv4admin.ip_address %></td>
+        <td><%= ipv4admin.Host %></td>
+        <td><%= ipv4admin.Note %></td>
+        <td><%= link_to 'Show', ipv4admin %></td>
+        <td><%= link_to 'Edit', edit_ipv4admin_path(ipv4admin) %></td>
+        <td><%= link_to 'Destroy', ipv4admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ipv4admin', new_ipv4admin_path %>

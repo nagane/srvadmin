@@ -1,0 +1,33 @@
+<%= form_for(@ipv4admin) do |f| %>
+  <% if @ipv4admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ipv4admin.errors.count, "error") %> prohibited this ipv4admin from being saved:</h2>
+
+      <ul>
+      <% @ipv4admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ip_statu %><br>
+    <%= f.number_field :ip_statu %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_address %><br>
+    <%= f.text_field :ip_address %>
+  </div>
+  <div class="field">
+    <%= f.label :Host %><br>
+    <%= f.text_field :Host %>
+  </div>
+  <div class="field">
+    <%= f.label :Note %><br>
+    <%= f.text_field :Note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

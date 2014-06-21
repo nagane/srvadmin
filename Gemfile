@@ -38,3 +38,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess' 
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+end
